@@ -47,51 +47,51 @@ public class StringMatrixRotation {
     }
     private static char[][] matrixRotation(char[][] matrix, int rotation) {
 
-        char[][] wtf;
+        char[][] rotatedMatrix;
         int rows, cols;
 
         switch (rotation) {
             case 90:
-                wtf = new char[matrix[0].length][matrix.length];
-                rows = wtf.length;
-                cols = wtf[0].length;
+                rotatedMatrix = new char[matrix[0].length][matrix.length];
+                rows = rotatedMatrix.length;
+                cols = rotatedMatrix[0].length;
 
                 for (int i = 0; i < rows; i++) {
 
                     for (int j = 0; j < cols; j++) {
 
-                        wtf[i][j] = matrix[wtf[0].length - 1 - j][i];
+                        rotatedMatrix[i][j] = matrix[rotatedMatrix[0].length - 1 - j][i];
                     }
                 }
                 break;
             case 180:
-                wtf = new char[matrix.length][matrix[0].length];
-                rows = wtf.length;
-                cols = wtf[0].length;
+                rotatedMatrix = new char[matrix.length][matrix[0].length];
+                rows = rotatedMatrix.length;
+                cols = rotatedMatrix[0].length;
 
                 for (int i = 0; i < rows; i++) {
 
                     for (int j = 0; j < cols; j++) {
-                        wtf[i][j] = matrix[matrix.length - 1 - i][matrix[0].length - 1 - j];
+                        rotatedMatrix[i][j] = matrix[matrix.length - 1 - i][matrix[0].length - 1 - j];
                     }
                 }
                 break;
             case 270:
-                wtf = new char[matrix[0].length][matrix.length];
-                rows = wtf.length;
-                cols = wtf[0].length;
+                rotatedMatrix = new char[matrix[0].length][matrix.length];
+                rows = rotatedMatrix.length;
+                cols = rotatedMatrix[0].length;
 
                 for (int i = 0; i < rows; i++) {
 
                     for (int j = 0; j < cols; j++) {
-                        wtf[i][j] = matrix[j][matrix[0].length - 1 - i];
+                        rotatedMatrix[i][j] = matrix[j][matrix[0].length - 1 - i];
                     }
                 }
                 break;
             default:
-                wtf = matrix;
+                rotatedMatrix = matrix;
                 break;
         }
-        return wtf;
+        return rotatedMatrix;
     }
 }
