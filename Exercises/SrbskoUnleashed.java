@@ -9,7 +9,6 @@ public class SrbskoUnleashed {
 
         LinkedHashMap<String, LinkedHashMap<String, Integer>> populationStats = new LinkedHashMap<>();
         String input;
-
         while (!"report".equals(input = scanner.nextLine())) {
 
             String[] lineData = input.split("\\|");
