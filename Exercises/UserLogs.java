@@ -10,7 +10,6 @@ public class UserLogs {
     public static void main(String[] args) throws IOException {
 
         Scanner scanner = new Scanner(System.in);
-
         String input;
         Map<String, LinkedHashMap<String, Integer>> IPLog = new TreeMap<>();
 
